@@ -1,0 +1,107 @@
+@import "variables";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?js2p2d") format("truetype"),
+    url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?js2p2d") format("woff"),
+    url("../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?js2p2d##{$icomoon-font-family}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-person {
+  &:before {
+    content: $icon-add-person;
+  }
+}
+.icon-chat {
+  &:before {
+    content: $icon-chat;
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-doc {
+  &:before {
+    content: $icon-doc;
+  }
+}
+.icon-doc-chat {
+  &:before {
+    content: $icon-doc-chat;
+  }
+}
+.icon-graph {
+  &:before {
+    content: $icon-graph;
+  }
+}
+.icon-mark {
+  &:before {
+    content: $icon-mark;
+  }
+}
+.icon-photo {
+  &:before {
+    content: $icon-photo;
+  }
+}
+.icon-photo-chat {
+  &:before {
+    content: $icon-photo-chat;
+  }
+}
+.icon-plus {
+  &:before {
+    content: $icon-plus;
+  }
+}
+.icon-power {
+  &:before {
+    content: $icon-power;
+  }
+}
+.icon-sett {
+  &:before {
+    content: $icon-sett;
+  }
+}
+.icon-triangle-down {
+  &:before {
+    content: $icon-triangle-down;
+  }
+}
+.icon-triangle-right {
+  &:before {
+    content: $icon-triangle-right;
+  }
+}
+.icon-video {
+  &:before {
+    content: $icon-video;
+  }
+}
