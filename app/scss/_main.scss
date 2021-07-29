@@ -2,6 +2,8 @@
 
 .page-massenger {
    display: flex;
+   height: 100vh;
+   overflow-y: hidden;
    &__content {
       display: grid;
       grid-template-columns: 25% 50% 25%;
@@ -10,7 +12,7 @@
    }
 }
 .menu {
-   height: max-content;
+   height: 100vh;
    flex: 0 0 72px;
    background: #eaf2f1;
    box-shadow: inset -2px 0px 0px #d8dde6;
@@ -70,8 +72,11 @@
 }
 .indox {
    border-right: 1.63531px solid #f1f1f1;
-   height: 100vh;
-   padding: 73px 21px 21px 21px;
+   // height: 100vh;
+   padding: 73px 21px 0px 21px;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
    &__title {
       font-weight: 600;
       font-size: 11.4472px;
@@ -81,9 +86,14 @@
    }
 
    &__content {
+      overflow: hidden;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
    }
 
    &__topbar {
+      flex: 0 0 auto;
       display: flex;
       align-items: center;
       margin-bottom: 21px;
@@ -118,6 +128,15 @@
    }
 
    &__dialogs {
+      flex: 1 1 auto;
+      // height: 500px;
+      // max-height: 100vh;
+      // max-height: 100%;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+         width: 0;
+      }
    }
 }
 .dialog {
@@ -130,7 +149,7 @@
    max-width: 100%;
    cursor: pointer;
    &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
    }
    &__info {
       display: flex;
@@ -229,8 +248,11 @@
 .details {
    border-left: 1.63531px solid #f1f1f1;
    padding: 51px 8px 0px 0px;
-   height: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
    &__title {
+      flex: 0 0 auto;
       margin-left: 35px;
       margin-bottom: 17.5px;
       font-weight: 600;
@@ -240,10 +262,18 @@
    }
 
    &__content {
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
    }
-
+   &__container {
+      flex: 1 1 auto;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+         width: 0;
+      }
+   }
    &__contact {
       align-self: center;
       display: flex;
@@ -306,7 +336,7 @@
          font-size: 12px;
       }
       .icon-triangle-down {
-         font-size: 8px;
+         font-size: 6px;
       }
    }
 
@@ -349,6 +379,7 @@
       line-height: 24px;
       color: #acacac;
       position: relative;
+      cursor: pointer;
    }
 
    &__selector-large-head {
@@ -357,6 +388,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      &:hover {
+         background: #dff3ff;
+      }
       .icon-triangle-right {
          font-size: 20px;
       }
@@ -388,7 +422,13 @@
 }
 
 .chat {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   // max-height: 100vh;
+   overflow: hidden;
    &__topline {
+      flex: 0 0 auto;
       padding: 43.5px 29.5px 14px 24px;
       display: flex;
       align-items: center;
@@ -539,9 +579,12 @@
       }
    }
    &__content {
+      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      // height: 100%;
+      // height: 450px;
+      overflow: hidden;
    }
    &__date-box {
       margin-right: 31.5px;
@@ -549,7 +592,6 @@
       justify-content: center;
       overflow: hidden;
       flex: 0 0 auto;
-      margin-bottom: 27.3px;
    }
    &__date {
       font-weight: 600;
@@ -576,14 +618,19 @@
    }
    &__messages {
       flex: 1 1 auto;
+      // height: 400px;
+      max-height: 100%;
       display: flex;
       flex-direction: column;
+      padding-top: 27.3px;
       padding-right: 29.5px;
       padding-bottom: 30px;
       padding-left: 20px;
-   }
-   &__input {
-      flex: 0 0 auto;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+         width: 0;
+      }
    }
    &__input-text {
       position: relative;
@@ -782,6 +829,10 @@
    &__body {
       max-height: 241.6px;
       overflow-y: scroll;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+         width: 0;
+      }
    }
 
    &__item {
@@ -806,11 +857,13 @@
    }
 }
 .chat-input {
+   flex: 0 0 auto;
    margin: 0 16.5px 35px 14px;
    &__input-text {
       border-radius: 3.14286px 3.14286px 0 0;
       border: 0.785714px solid #ededed;
       border-bottom: unset;
+      position: relative;
    }
 
    &__textarea {

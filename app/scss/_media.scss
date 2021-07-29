@@ -10,6 +10,29 @@
 
 // MAX-WIDTH 1199.98PX breakpoints START
 @media (max-width: 1199.98px) {
+   .dialog__status {
+      padding: 1.5px 5px 3.3px 5px;
+   }
+
+   .dialog__text-message {
+      max-width: 125px;
+   }
+
+   .dialog {
+      padding: 10px;
+   }
+
+   .details__selector-large-body {
+      padding: 15px 15px;
+   }
+
+   .menu {
+      height: 100vh;
+   }
+
+   .message-in .message__attached-items {
+      margin-left: 10px;
+   }
 }
 // MAX-WIDTH 1199.98PX breakpoints END
 

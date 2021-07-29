@@ -17,3 +17,11 @@ $('.select-item').on('click', function () {
    block.find('.select-icon').toggleClass('icon-triangle-up');
 })
 //select end
+
+$('.chat__mark').on('click', function () {
+   $(this).toggleClass('active');
+})
+
+$('.chat__pick-out').on('click', function () {
+   $(this).toggleClass('active');
+})
