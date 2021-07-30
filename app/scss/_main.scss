@@ -369,7 +369,7 @@
    }
 
    &__selector-large {
-      &:nth-child(2) {
+      &:first-child {
          .details__selector-large-head {
             border-top: 1.96532px solid #f4f4f4;
          }
@@ -380,6 +380,11 @@
       color: #acacac;
       position: relative;
       cursor: pointer;
+      &.open {
+         .details__selector-large-head {
+            background: #dff3ff;
+         }
+      }
    }
 
    &__selector-large-head {
@@ -403,11 +408,11 @@
    }
 
    &__selector-large-body {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
+      // position: absolute;
+      // top: calc(100% + 8px);
+      // left: 0;
       background: #dff3ff;
-      border-radius: 10px;
+      // border-radius: 10px;
       padding: 16px 30px;
       width: 100%;
       z-index: 5;
